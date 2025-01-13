@@ -9,8 +9,8 @@ Normally, you'll either use a consumption plan or a standard plan. Their pricing
 ## Consumption Plan
 
 There are three types of cost from a consumption plan:  
-	- the number of actions that a logic app actually runs
-	- the number of Api connection calls
+	- the number of actions that a logic app actually runs  
+	- the number of Api connection calls  
 	- storage
 
 Please note that the price varies from different regions.
@@ -46,8 +46,8 @@ Your logic apps need storage to store its run history. This storage generates a 
 ## Standard Plan
 
 Buil-in actions are free to use. In addition, there are three types of cost from a consumption plan:  
-	- the app service plan
-	- the number of Api connection calls
+	- the app service plan  
+	- the number of Api connection calls  
 	- storage
 
 ### App Service Plan
