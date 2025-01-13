@@ -1,6 +1,6 @@
 # Deploy a Standard Logic App with Private Storage Account
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://raw.githubusercontent.com/jesseck3013/logic-app-notes/refs/heads/templates/templates/logic_app_with_private_storage/template.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjesseck3013%2Flogic-app-notes%2Frefs%2Fheads%2Ftemplates1%2Ftemplates%2Flogic_app_with_private_storage%2Ftemplate.json)
 
 This template is a modified version of
 https://github.com/VeeraMS/LogicApp-deployment-with-Secure-Storage, with the
