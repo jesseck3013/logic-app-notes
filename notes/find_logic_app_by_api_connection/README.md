@@ -11,8 +11,10 @@ It is sometimes useful to perform the process in reverse. For example, you might
 ### script
 
 - Usage
-  - replace subscriptionId's value with the subscription you want to search
-  - replace apiConnectionId's value with the target Api connection's resource id
+  - replace the value of `subscriptionId` and `apiConnectionId`
+  - run the script in
+	- azure cloud shell -> swtich to powershell
+    - local powershell with [Az](https://learn.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-13.0.0) installed.
 
 ```pwsh
 $subscriptionId = "<subscription id>"
