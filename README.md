@@ -12,3 +12,10 @@ Deploy a standard logic app with a storage accont that is not publicly accessiab
 
 Deploy a standard logic app that uses `managed identity` to access its associated storage account.
 
+## Notes
+
+### [Find Logic Apps by Api Connection](/notes/find_logic_app_by_api_connection)
+
+Given an Api connection's resource id, find which all the logic apps that have reference to it.
+
+
