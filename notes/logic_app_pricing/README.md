@@ -9,15 +9,15 @@ Normally, you'll either use a consumption plan or a standard plan. Their pricing
 ## Consumption Plan
 
 There are three types of cost from a consumption plan:
-	- the number of actions that a logic app actually runs.
-	- the number of Api connection calls.
+	- the number of actions that a logic app actually runs
+	- the number of Api connection calls
 	- storage
 
 Please note that the price varies from different regions.
 
 ### Actions
 
-$0.000025 per Execution in West US.
+- $0.000025 per Execution in West US.
 
 Every time your logic apps run a built-in action, it generates a cost. 
 
@@ -29,7 +29,7 @@ You can check the connector type on the about page of an action.
 
 ### Api connection calls 
 
-$0.000125 per Execution in West US.
+- $0.000125 per Execution in West US.
 
 Every time your Logic Apps run an action that belongs to a managed connector, the Logic App calls the underlying API connection, which generates a cost.
 
@@ -39,7 +39,29 @@ You can check the connector type on the about page of an action.
 
 ### Storage
 
-$0.12 GB/month in West US.
+- $0.12 GB/month in West US.
 
-Your logic apps need storage to store its run history. This storage generates a cost
+Your logic apps need storage to store its run history. This storage generates a cost.
 
+## Standard Plan
+
+Buil-in actions are free to use. In addition, there are three types of cost from a consumption plan:
+	- the app service plan
+	- the number of Api connection calls
+	- storage
+
+### App Service Plan
+
+ASP charges by an hourly rate which differs from the allocated vcpu and memory. Once you deploy an app service plan, it starts generating cost until you delete the resource. Please note that ASP has an auto scale out feature, when there are too many requests, it adds more instances to serve those requests. 
+
+The screenshot below is the monthly rate of three pricing tiers for standard logic app. The estimation is for one instance.
+
+![asp](./asp.png)
+
+### Api connection calls 
+
+Same as consumption.
+
+### Storage
+
+A standard logic app uses a storage account to store its run history. It follows the storage account's pricing.
