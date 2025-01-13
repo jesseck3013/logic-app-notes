@@ -18,4 +18,6 @@ Deploy a standard logic app that uses `managed identity` to access its associate
 
 Given an Api connection's resource id, find which all the logic apps that have reference to it.
 
+### [Logic App Pricing](/notes/logic_app_pricing)
 
+Understand the cost of using a logic app.
