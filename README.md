@@ -22,6 +22,10 @@ Given an Api connection's resource id, find which all the logic apps that have r
 
 Understand the cost of using a logic app.
 
+### [Verifying the Next Execution Time for Recurrence Trigger](/notes/recurrence_trigger_next_execution_time)
+
+Knowing the next execution time can help avoid misconfigurations. It's especially useful when the next run starts a few days later, as we don't want to wait that long to confirm if a trigger is working correctly.
+
 ### [Standard Logic App, User-Assigned Managed Identity, Blob Storage](/notes/standard_logic_app_user_identity_storage)
 
 Neither built-in nor managed connectors support accessing a network-restricted blob storage with a user-assigned identity. This note provides a workaround for this problem.
