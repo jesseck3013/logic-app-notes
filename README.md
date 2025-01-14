@@ -24,4 +24,4 @@ Understand the cost of using a logic app.
 
 ### [Standard Logic App, User-Assigned Managed Identity, Blob Storage](/notes/standard_logic_app_user_identity_storage)
 
-Both built-in and managed connectors do not support accessing a network restricted blob storage with a user-assigned identity. This note provides a workaround for this problem.
+Neither built-in nor managed connectors support accessing a network-restricted blob storage with a user-assigned identity. This note provides a workaround for this problem.
