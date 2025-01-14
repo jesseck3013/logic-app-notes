@@ -8,7 +8,7 @@ This notes demonstrate the script in powershell. You can do the same thing with 
 
 ## Consumption
 
-- Replace <subscription id>, <resource group name>, <workflow name> with the corresponding values.
+- Replace `<subscription id>`, `<resource group name>`, `<workflow name>` with the corresponding values.
 
 ```pwsh
 Set-AzConText -Subscription "<subscription id>"
@@ -17,3 +17,21 @@ Get-AzLogicAppTrigger -ResourceGroupName "<resource group name>" -Name "<workflo
 
 The screenshot is the example output.  
 ![consumption](./consumption.png)
+
+## Standard
+
+- Replace `<subscription id>`, `<resource group name>`, `<logic app name>`, `<workflow name>` with the corresponding values.
+
+```pwsh
+$subscriptionId = "<subscription id>"
+$resourceGroupName = "<resource group name>"
+$logicAppName = "<logic app name>"
+$workflowName = "<workflow name>"
+$uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroupName}/providers/Microsoft.Web/sites/${logicAppName}/hostruntime/runtime/webhooks/workflow/api/management/workflows/${workflowName}/triggers?api-version=2024-04-01"
+
+$response = Invoke-AzRestMethod -Method Get -Uri $uri
+Write-Host $response.Content
+```
+
+The screenshot is the example output.  
+![standard](./standard.png)
