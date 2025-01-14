@@ -59,9 +59,9 @@ For West US, the hourly rate is around:
 	- 1 GB memory $0.0143  
 
 WS1 is the base tier of a standard plan. We can estimate its cost this way:  
-	- WS1 has 1 vCPU and 3.5 GB memory.
-	- The hourly rate of one WS1 instance: $0.2 + $0.0143 * 3.5 = $0.25. 
-	- The monthly rate of one WS1 instance: $0.25 * 24 * 30 = $180.
+	- WS1 has 1 vCPU and 3.5 GB memory.  
+	- The hourly rate of one WS1 instance: $0.2 + $0.0143 * 3.5 = $0.25.   
+	- The monthly rate of one WS1 instance: $0.25 * 24 * 30 = $180.  
 
 The screenshot below is the monthly rate of three pricing tiers for standard logic app. The estimation is for one instance.
 
