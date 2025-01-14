@@ -2,7 +2,7 @@
 
 The [formal documentation](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-pricing) includes all the pricing details, but it is complex and hard to follow. I extract the most important part to help you understand the pricing model. Once you finish reading this note, you can refer to the formal documentation for more details.
 
-# Region
+# Regions
 
 Logic App prices vary by region. This note uses West US as an example. You can check pricing for other regions on this [page](https://azure.microsoft.com/en-us/pricing/details/logic-apps/#pricing).
 
@@ -54,11 +54,14 @@ Buil-in actions are free to use. In addition, there are three types of cost from
 
 Once an ASP is deployed, it starts generating cost until you delete the resource. ASP charges an hourly rate which differs from the allocated vcpu and memory. 
 
-For West US, the hourly rate is around:
+For West US, the hourly rate is around:  
 	- 1 vCPU $0.2  
 	- 1 GB memory $0.0143  
 
-The base tier of a standard plan is WS1 which has 1 vCPU and 3.5 GB memory. In this case, the hourly rate of one WS1 instance is $0.2 + $0.0143 * 3.5 = $0.25. The monthly rate is around $0.25 * 24 * 30 = $180.
+WS1 is the base tier of a standard plan. We can estimate its cost this way:  
+	- WS1 has 1 vCPU and 3.5 GB memory.
+	- The hourly rate of one WS1 instance: $0.2 + $0.0143 * 3.5 = $0.25. 
+	- The monthly rate of one WS1 instance: $0.25 * 24 * 30 = $180.
 
 The screenshot below is the monthly rate of three pricing tiers for standard logic app. The estimation is for one instance.
 
