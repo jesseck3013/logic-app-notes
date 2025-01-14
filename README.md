@@ -21,3 +21,5 @@ Given an Api connection's resource id, find which all the logic apps that have r
 ### [Logic App Pricing](/notes/logic_app_pricing)
 
 Understand the cost of using a logic app.
+
+### [Standard Logic App Accesses Storage Account with User Assigned Identity](/notes/standard_logic_app_user_identity_storage)
