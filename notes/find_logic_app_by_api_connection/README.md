@@ -28,13 +28,17 @@ function Get-ConsumptionLogicApp {
 	$logicAppList = Get-AzLogicApp
 	$result = @()
 	
-	foreach ($logicApp in $logicAppList) {
-		$connections = $logicApp.Parameters | ConvertTo-JSON
+	foreach ($logicApp in $logicAppList) {             
+                $connections = $logicApp.Parameters.'$connections' | ConvertTo-Json -Depth 100 | ConvertFrom-Json
+                $ids = $connections.Value.PSObject.Properties.Value;  
 
-		if ($connections.ToLower().Contains($apiConnectionId.ToLower())) {
-			$result += $logicApp.Id
+                foreach ($value in $ids) {
+			 if ($value.connectionId.ToLower() -eq $apiConnectionId.ToLower()) { 
+			 	$result += $logicApp.Id
+			 }
 		}
-	}
+        }
+	
 	return ,$result
 }
 
@@ -51,9 +55,14 @@ function Get-StandardLogicApp {
 		$uri = "https://management.azure.com/$($standardLogicApp.Id)/workflowsconfiguration/connections/?api-version=2018-11-01"
 		
 		$response = Invoke-AzRestMethod -Method Get -Uri $uri
-		if ($response.Content.ToLower().Contains($apiConnectionId.ToLower())) {	
+	        $connections = $response.Content | ConvertFrom-Json -Depth 100
+    	        $connections = $connections.properties.files.'connections.json'.managedApiConnections
+    	        foreach ($value in $connections.PSObject.Properties.Value) {
+		    if ($value.connection.id.ToLower() -eq $apiConnectionId.ToLower()) { 
 			$result += $standardLogicApp.Id
-		}
+		    }
+                }
+
 		Start-Sleep -Seconds 1
 	}
 	
@@ -74,7 +83,6 @@ function Get-LogicApps {
 	Write-Host "Found $($standardResult.length) standard Logic Apps"
 	$standardResult | Format-List
 }
-
 
 Set-AzContext -Subscription $subscriptionId
 Get-LogicApps -apiConnectionId $apiConnectionId
